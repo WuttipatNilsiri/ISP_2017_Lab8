@@ -58,9 +58,11 @@ public class Rec {
 		Example: removeChar("abeabe", 'e') = "abab". */
 
 	public static String removeChar(String s, char to_remove_char) {
-
-		// fill me in
-
+		String c = to_remove_char + ""; 
+		if(s.indexOf(c) >= 0){
+			return removeChar(s.replace(to_remove_char + "", ""),to_remove_char);
+		}else
+			return s;
 	}
 
 	/**
@@ -68,14 +70,11 @@ public class Rec {
 	 * reverse("abcdefg") = "gfedcba".
 	 */
 	public static String reverse(String s) {
-
 	String result = "" ;
-	
 	for ( int i = s.length()-1 ; i>=0 ; i-- ) {
 		result = result + s.charAt(i) ;
 	}
 	return result ;
-
 	}
 
 	public static void main(String[] args) {
@@ -96,4 +95,5 @@ public class Rec {
 		System.out.println(reverse("abbcccdeaaa"));
 		System.out.println(reverse("AMANAPLANACANALPANAMA"));
 	}
+
 }
