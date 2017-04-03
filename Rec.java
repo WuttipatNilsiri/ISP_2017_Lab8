@@ -1,4 +1,3 @@
-package ku.util;
 
 public class Rec {
 
