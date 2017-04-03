@@ -24,9 +24,12 @@ public class Rec {
     /** = a copy of s with to_remove_char removed.
 		Example: removeChar("abeabe", 'e') = "abab". */
 	public static String removeChar(String s, char to_remove_char) {
-	
-	// fill me in
-	
+		String c = to_remove_char + ""; 
+		if(s.indexOf(c) >= 0){
+			return removeChar(s.replace(to_remove_char + "", ""),to_remove_char);
+		}else
+			return s;
+		
 	}
 	
     /** = a copy of s with characters in reverse order.
@@ -36,23 +39,22 @@ public class Rec {
 	// fill me in
 	
 	}
-
     public static void main(String[] args) {
-        System.out.println(numDigits(123));
-        System.out.println(numDigits(123456));
-        System.out.println(numDigits(1));
-        System.out.println(numDigits(0));
-        System.out.println("-----------------");
-        System.out.println(sumDigits(123));
-        System.out.println(sumDigits(123456));
-        System.out.println(sumDigits(1));
-        System.out.println(sumDigits(0));
+//        System.out.println(numDigits(123));
+//        System.out.println(numDigits(123456));
+//        System.out.println(numDigits(1));
+//        System.out.println(numDigits(0));
+//        System.out.println("-----------------");
+//        System.out.println(sumDigits(123));
+//        System.out.println(sumDigits(123456));
+//        System.out.println(sumDigits(1));
+//        System.out.println(sumDigits(0));
 	System.out.println("-----------------");
 	System.out.println(removeChar("eawabbcceccddeeaaeeeee", 'e'));
 	System.out.println(removeChar("acacacacac", 'a'));
 	System.out.println("-----------------");		
-	System.out.println(reverse("aaabbbaccabda"));
-        System.out.println(reverse("abbcccdeaaa"));
-	System.out.println(reverse("AMANAPLANACANALPANAMA"));
+//	System.out.println(reverse("aaabbbaccabda"));
+//        System.out.println(reverse("abbcccdeaaa"));
+//	System.out.println(reverse("AMANAPLANACANALPANAMA"));
     }
 }
