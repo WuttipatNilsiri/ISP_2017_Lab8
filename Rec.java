@@ -1,3 +1,4 @@
+
 public class Rec {
 
 	/**
@@ -5,17 +6,25 @@ public class Rec {
 	 * numDigits(0) = 1, numDigits(3) = 1, numDigits(34) = 2. numDigits(1356) =
 	 * 4. Precondition: n >= 0.
 	 */
-	public static int numDigits(int n) {
+	/** = number of the digits in the decimal representation of n.
+		e.g. numDigits(0) = 1, numDigits(3) = 1, numDigits(34) = 2.
+		numDigits(1356) = 4.
+		Precondition: n >= 0. */
+    public static int numDigits(int n) {
+	
+	// fill me in
+    	 if (n > -10 && n < 10) {
+    	        return 1;
+    	    } else {
+    	        return numDigits(n / 10) + 1;
+    	    }
+    }
+    
 
-		// fill me in
-
-	}
-
-	/**
-	 * = sum of the digits in the decimal representation of n. e.g. sumDigits(0)
-	 * = 0, sumDigits(3) = 3, sumDigits(34) = 7, sumDigits(345) = 12.
-	 * Precondition: n >= 0.
-	 */
+    /** = sum of the digits in the decimal representation of n.
+      e.g. sumDigits(0) = 0, sumDigits(3) = 3, sumDigits(34) = 7,
+      sumDigits(345) = 12.
+      Precondition: n >= 0. */
 	public static int sumDigits(int n) {
 
 		// String sum = Integer.toString(n);
@@ -41,6 +50,13 @@ public class Rec {
 	 * = a copy of s with to_remove_char removed. Example: removeChar("abeabe",
 	 * 'e') = "abab".
 	 */
+
+    
+  
+	
+    /** = a copy of s with to_remove_char removed.
+		Example: removeChar("abeabe", 'e') = "abab". */
+
 	public static String removeChar(String s, char to_remove_char) {
 
 		// fill me in
@@ -53,7 +69,12 @@ public class Rec {
 	 */
 	public static String reverse(String s) {
 
-		// fill me in
+	String result = "" ;
+	
+	for ( int i = s.length()-1 ; i>=0 ; i-- ) {
+		result = result + s.charAt(i) ;
+	}
+	return result ;
 
 	}
 
